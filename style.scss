@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+$Soft-Cyan: hsl(174, 77%, 80%);
+$Strong-Cyan: hsl(174, 86%, 45%);
+$Light-Grayish-Red: hsl(14, 92%, 95%);
+$Light-Red: hsl(15, 100%, 70%);
+$Pale-Blue: hsl(226, 100%, 87%);
+$White: hsl(0, 0%, 100%);
+$Very-Pale-Blue: hsl(230, 100%, 99%);
+$Light-Grayish-Blue: hsl(224, 65%, 95%);
+$Light-Grayish-Blue: hsl(223, 50%, 87%);
+$Lighter: hsl(223, 50%, 96.5%);
+$Grayish-Blue: hsl(225, 20%, 60%);
+$Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+$font-family-default: "Manrope", sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+p,
+small {
+  color: $Grayish-Blue;
+}
+@mixin flex-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin slider-styles {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: $White;
+  background-image: url("images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 1rem 2rem $Soft-Cyan;
+  transition: all 0.25s ease-in-out;
+}
+body {
+  padding: 1em;
+  font-family: $font-family-default;
+  background-color: $Very-Pale-Blue;
+}
+@import "components/intro-section";
+@import "components/main";
+@import "components/footer";

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Interactive pricing component</title>
+  </head>
+  <body>
+    <div class="intro-section">
+      <h1>Simple, traffic-based pricing</h1>
+      <p>Sign-up for our 30-day trial. No credit card</p>
+    </div>
+
+    <main role="main">
+      <div class="pricing-component">
+        <div class="pricing-info">
+          <p class="pageviews">100K PAGEVIEWS</p>
+          <p class="amount"><span>$16.00</span> / month</p>
+        </div>
+
+        <input type="range" class="slider" id="range" step="25" min="0" max="100" />
+
+        <div class="billing">
+          <small>Monthly Billing</small>
+          <div class="toggle-container">
+            <i class="fa-solid fa-circle"></i>
+          </div>
+          <small
+            >Yearly Billing
+            <span><a class="desktop" href="#">25% discount</a></span>
+            <span><a class="mobile" href="#">-25%</a></span>
+          </small>
+        </div>
+
+        <div class="perks">
+          <div>
+            <p>
+              <img
+                class="check-icon"
+                src="./images/icon-check.svg"
+                alt="check icon"
+              />Unlimited websites
+            </p>
+            <p>
+              <img
+                class="check-icon"
+                src="./images/icon-check.svg"
+                alt="check icon"
+              />100% ownership
+            </p>
+            <p>
+              <img
+                class="check-icon"
+                src="./images/icon-check.svg"
+                alt="check icon"
+              />Email reports
+            </p>
+          </div>
+
+          <div><button>Start my trial</button></div>
+        </div>
+      </div>
+    </main>
+
+    <footer role="contentinfo" class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io/profile/CSS-Viki" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://twitter.com/vykiddeh_">Your Name Here</a>.
+    </footer>
+  </body>
+</html>

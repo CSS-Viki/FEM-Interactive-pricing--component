@@ -1,0 +1,187 @@
+main {
+  .pricing-component {
+    margin: 0 auto;
+    max-width: 450px;
+    padding: 1.5em;
+    background-color: $White;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    .pricing-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+        font-size: 0.8rem;
+      }
+      .amount {
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 2rem;
+          color: $Dark-Desaturated-Blue;
+          font-weight: 800;
+        }
+      }
+    }
+    input[type="range"] {
+      margin-block: 40px;
+      width: 100%;
+    }
+    .slider {
+      appearance: none;
+      height: 0.5rem;
+      border-radius: 5px;
+      background: $Light-Grayish-Blue;
+      outline: none;
+    }
+
+    .slider::-moz-range-thumb {
+      @include slider-styles();
+    }
+
+    .slider::-webkit-slider-thumb {
+      @include slider-styles();
+    }
+
+    .slider::-moz-range-thumb:hover {
+      background-color: $Strong-Cyan;
+    }
+
+    .slider::-webkit-slider-thumb:hover {
+      background-color: $Strong-Cyan;
+    }
+
+    .slider:hover,
+    .slider::-moz-range-thumb:active,
+    .slider::-webkit-slider-thumb:active {
+      cursor: grabbing;
+    }
+
+    input[type="range"]::-moz-range-progress {
+      height: 0.5rem;
+      border-radius: 5px;
+      background-color: $Strong-Cyan;
+      cursor: grabbing;
+    }
+
+    .billing {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $Grayish-Blue;
+
+      small {
+        font-size: clamp(0.575rem, 0.5409rem + 0.1818vw, 0.7rem);
+
+        span {
+          margin-left: 5px;
+          margin-right: 20px;
+          .desktop,
+          .mobile {
+            cursor: default;
+            text-decoration: none;
+            color: $Light-Red;
+            font-size: 0.55rem;
+            background-color: $Light-Grayish-Red;
+            padding: 0.3em 0.7em;
+            border-radius: 20px;
+          }
+          .mobile {
+            display: none;
+          }
+        }
+      }
+
+      .toggle-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 40px;
+        border-radius: 20px;
+        padding: 0.15em;
+        margin-inline: 10px;
+        background-color: $Light-Grayish-Blue;
+        cursor: pointer;
+
+        i {
+          color: #fff;
+        }
+      }
+      .toggle-container.active {
+        justify-content: flex-end;
+        background-color: $Soft-Cyan;
+      }
+    }
+    .perks {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      div {
+        @include flex-content();
+        align-items: flex-start;
+        gap: 5px;
+
+        .check-icon {
+          display: inline;
+          margin-right: 20px;
+        }
+        button {
+          display: inline-block;
+          background-color: $Dark-Desaturated-Blue;
+          border: none;
+          outline: none;
+          padding: 0.5em 2em;
+          border-radius: 20px;
+          color: $Pale-Blue;
+          transition: color 0.3s ease;
+        }
+        button:hover {
+          color: $White;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    .pricing-component {
+      max-width: 300px;
+
+      .pricing-info {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .billing {
+        small {
+          span {
+            margin-right: 0;
+            .desktop {
+              display: none;
+            }
+            .mobile {
+              display: inline;
+            }
+          }
+        }
+      }
+      .perks {
+        flex-direction: column;
+        div {
+          align-items: center;
+          button {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+}
