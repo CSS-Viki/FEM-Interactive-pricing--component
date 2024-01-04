@@ -37,7 +37,7 @@ Very interesting frontend mentor project i must say.
 ####
 
 - Frontend Mentor - [CSS-Viki](https://www.frontendmentor.io/profile/CSS-Viki)
-- Live Site URL: - [Live site](https://fem-pricing-component.onrender.com)
+- Live Site URL: - [Live site](https://interactive-pricing-component-project.onrender.com)
 
 Coded with ❤️ by [Viki Wainaina](https://twitter.com/vykiddeh_)
 
